@@ -29,7 +29,7 @@ Dự án được deploy tại AWS Region:
 ap-southeast-1
 ```
 
-<img src="/images/aws-region-singapore.png" alt="AWS Singapore Region" width="1300">
+<img src="/FCAJ-Workshop/images/aws-region-singapore.png" alt="AWS Singapore Region" width="1300">
 
 Đây là region Singapore.
 

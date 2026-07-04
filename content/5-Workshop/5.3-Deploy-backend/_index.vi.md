@@ -149,7 +149,7 @@ hoặc:
 UPDATE_COMPLETE
 ```
 
-![CloudFormation Stack](/images/5-Workshop/cloudformation-stack.png)
+![CloudFormation Stack](/FCAJ-Workshop/images/5-Workshop/cloudformation-stack.png)
 Nếu stack bị lỗi, mở tab **Events** để xem tài nguyên nào deploy thất bại.
 
 ---
@@ -157,7 +157,7 @@ Nếu stack bị lỗi, mở tab **Events** để xem tài nguyên nào deploy t
 ## Bước 7: Kiểm tra API Gateway endpoint
 
 Backend API endpoint của môi trường development là:
-![API Gateway Endpoint](/images/5-Workshop/api-gateway-endpoint.png)
+![API Gateway Endpoint](/FCAJ-Workshop/images/5-Workshop/api-gateway-endpoint.png)
 
 ```text
 https://zsqkp5vpb9.execute-api.ap-southeast-1.amazonaws.com/dev
@@ -181,7 +181,7 @@ Mở AWS Management Console và vào:
 DynamoDB > Tables
 ```
 
-<img src="/images/aws-dynamoDB.png" alt="AWS DynamoDB" width="1300">
+<img src="/FCAJ-Workshop/images/aws-dynamoDB.png" alt="AWS DynamoDB" width="1300">
 
 Kiểm tra main table:
 
@@ -214,7 +214,7 @@ Mở:
 Amazon S3 > Buckets
 ```
 
-<img src="/images/S3-buckets.png" alt="AWS S3 - Buckets" width="1300">
+<img src="/FCAJ-Workshop/images/S3-buckets.png" alt="AWS S3 - Buckets" width="1300">
 
 Kiểm tra upload bucket được tạo bởi backend stack.
 
@@ -236,7 +236,7 @@ Mở:
 Amazon Cognito > User pools
 ```
 
-<img src="/images/Cognito-UP.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/Cognito-UP.png" alt="AWS Cognito - User Pool" width="1300">
 
 Kiểm tra User Pool ID:
 
@@ -244,7 +244,7 @@ Kiểm tra User Pool ID:
 ap-southeast-1_AKc39KB4L
 ```
 
-<img src="/images/UP.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/UP.png" alt="AWS Cognito - User Pool" width="1300">
 
 User Pool xử lý:
 
@@ -266,7 +266,7 @@ Mở:
 AWS Lambda > Functions
 ```
 
-<img src="/images/lambda-F.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/lambda-F.png" alt="AWS Cognito - User Pool" width="1300">
 
 Kiểm tra các Lambda functions của backend đã được tạo thành công.
 
@@ -276,7 +276,7 @@ Sau đó mở:
 CloudWatch > Log groups
 ```
 
-<img src="/images/cw-log.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/cw-log.png" alt="AWS Cognito - User Pool" width="1300">
 
 Kiểm tra log groups của Lambda functions. Các log này hữu ích khi debug lỗi API, lỗi xác thực, lỗi thanh toán và lỗi validate dữ liệu.
 
@@ -320,9 +320,9 @@ Mở:
 CloudFormation > Stacks > wallet-app-backend-dev > Events
 ```
 
-<img src="/images/c-info.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/c-info.png" alt="AWS Cognito - User Pool" width="1300">
 
-<img src="/images/event.png" alt="AWS Cognito - User Pool" width="900">
+<img src="/FCAJ-Workshop/images/event.png" alt="AWS Cognito - User Pool" width="900">
 
 Đọc event bị lỗi và sửa tài nguyên hoặc quyền liên quan.
 

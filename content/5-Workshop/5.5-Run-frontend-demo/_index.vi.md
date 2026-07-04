@@ -90,7 +90,7 @@ flutter run -d chrome --web-port 8080 --dart-define-from-file=config/dev.json
 ```
 
 Kết quả mong đợi:
-![Demo Flutter app chạy local](/images/5-Workshop/flutter-local-demo.png)
+![Demo Flutter app chạy local](/FCAJ-Workshop/images/5-Workshop/flutter-local-demo.png)
 
 - Chrome mở Flutter app.
 - Ứng dụng hiển thị màn hình xác thực.

@@ -91,7 +91,7 @@ flutter run -d chrome --web-port 8080 --dart-define-from-file=config/dev.json
 ```
 
 Expected result:
-![Demo Flutter app chạy local](/images/5-Workshop/flutter-local-demo.png)
+![Demo Flutter app chạy local](/FCAJ-Workshop/images/5-Workshop/flutter-local-demo.png)
 
 - Chrome opens the Flutter app.
 - The app loads the authentication screen.

@@ -116,7 +116,7 @@ Tuy nhiên, dữ liệu y tế đòi hỏi các kiểm soát nghiêm ngặt về
 
 ## Hình ảnh
 
-![Physical AI in Healthcare](/images/Blog/Blog3.png)
+![Physical AI in Healthcare](/FCAJ-Workshop/images/Blog/Blog3.png)
 
 ## Link tham khảo
 

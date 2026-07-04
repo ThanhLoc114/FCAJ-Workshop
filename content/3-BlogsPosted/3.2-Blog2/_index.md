@@ -94,7 +94,7 @@ A key message from the blog is very impressive:
 
 ## Image
 
-![Physical AI in Healthcare](/images/Blog/Blog2.png)
+![Physical AI in Healthcare](/FCAJ-Workshop/images/Blog/Blog2.png)
 
 ## Reference Link
 

@@ -54,9 +54,9 @@ Nhìn chung, AWS Transform có thể là một công cụ mạnh cho các tổ c
 
 ## Hình ảnh
 
-![AWS Transform Landing Zone](/images/Blog/blog1.1.png)
+![AWS Transform Landing Zone](/FCAJ-Workshop/images/Blog/blog1.1.png)
 
-![AWS Transform Architecture](/images/Blog/blog1.2.png)
+![AWS Transform Architecture](/FCAJ-Workshop/images/Blog/blog1.2.png)
 
 ## Link tham khảo
 

@@ -83,7 +83,7 @@ npm run dev
 ```
 
 Expected result:
-![Admin Web Local Demo](/images/5-Workshop/admin-web-local-demo.png)
+![Admin Web Local Demo](/FCAJ-Workshop/images/5-Workshop/admin-web-local-demo.png)
 
 ```text
 VITE ready

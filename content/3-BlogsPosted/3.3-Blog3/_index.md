@@ -116,7 +116,7 @@ However, healthcare data requires strict security, privacy, and compliance contr
 
 ## Image
 
-![Physical AI in Healthcare](/images/Blog/Blog3.png)
+![Physical AI in Healthcare](/FCAJ-Workshop/images/Blog/Blog3.png)
 
 ## Reference Link
 

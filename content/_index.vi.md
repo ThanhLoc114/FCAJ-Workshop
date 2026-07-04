@@ -33,7 +33,7 @@ chapter: false
 
   **Thời gian thực tập:** Từ 17/04/2026 đến 10/07/2026
 
-![Ảnh đại diện](/images/avatar.png)
+![Ảnh đại diện](/FCAJ-Workshop/images/avatar.png)
 
 ### Nội dung báo cáo
 

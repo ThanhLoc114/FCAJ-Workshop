@@ -92,7 +92,7 @@ Một thông điệp rất ấn tượng từ bài blog là:
 
 ## Hình ảnh
 
-![Physical AI in Healthcare](/images/Blog/Blog2.png)
+![Physical AI in Healthcare](/FCAJ-Workshop/images/Blog/Blog2.png)
 
 ## Link tham khảo
 

@@ -54,9 +54,9 @@ Overall, AWS Transform can be a powerful tool for organizations that want to acc
 
 ## Image
 
-![AWS Transform Landing Zone](/images/Blog/blog1.1.png)
+![AWS Transform Landing Zone](/FCAJ-Workshop/images/Blog/blog1.1.png)
 
-![AWS Transform Architecture](/images/Blog/blog1.2.png)
+![AWS Transform Architecture](/FCAJ-Workshop/images/Blog/blog1.2.png)
 
 ## Reference Link
 

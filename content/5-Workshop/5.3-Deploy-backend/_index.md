@@ -149,7 +149,7 @@ or:
 UPDATE_COMPLETE
 ```
 
-![CloudFormation Stack](/images/5-Workshop/cloudformation-stack.png)
+![CloudFormation Stack](/FCAJ-Workshop/images/5-Workshop/cloudformation-stack.png)
 If the stack fails, open the **Events** tab to identify the failed resource.
 
 ---
@@ -157,7 +157,7 @@ If the stack fails, open the **Events** tab to identify the failed resource.
 ## Step 7: Verify API Gateway Endpoint
 
 The backend API endpoint for the development environment is:
-![API Gateway Endpoint](/images/5-Workshop/api-gateway-endpoint.png)
+![API Gateway Endpoint](/FCAJ-Workshop/images/5-Workshop/api-gateway-endpoint.png)
 
 ```text
 https://zsqkp5vpb9.execute-api.ap-southeast-1.amazonaws.com/dev
@@ -181,7 +181,7 @@ Open the AWS Management Console and go to:
 DynamoDB > Tables
 ```
 
-<img src="/images/aws-dynamoDB.png" alt="AWS DynamoDB" width="1300">
+<img src="/FCAJ-Workshop/images/aws-dynamoDB.png" alt="AWS DynamoDB" width="1300">
 
 Check the main table:
 
@@ -214,7 +214,7 @@ Open:
 Amazon S3 > Buckets
 ```
 
-<img src="/images/S3-buckets.png" alt="AWS S3 - Buckets" width="1300">
+<img src="/FCAJ-Workshop/images/S3-buckets.png" alt="AWS S3 - Buckets" width="1300">
 
 Check the upload bucket created by the backend stack.
 
@@ -236,7 +236,7 @@ Open:
 Amazon Cognito > User pools
 ```
 
-<img src="/images/Cognito-UP.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/Cognito-UP.png" alt="AWS Cognito - User Pool" width="1300">
 
 Check the User Pool ID:
 
@@ -244,7 +244,7 @@ Check the User Pool ID:
 ap-southeast-1_AKc39KB4L
 ```
 
-<img src="/images/UP.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/UP.png" alt="AWS Cognito - User Pool" width="1300">
 
 The User Pool handles:
 
@@ -266,7 +266,7 @@ Open:
 AWS Lambda > Functions
 ```
 
-<img src="/images/lambda-F.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/lambda-F.png" alt="AWS Cognito - User Pool" width="1300">
 
 Check that the backend Lambda functions were created successfully.
 
@@ -276,7 +276,7 @@ Then open:
 CloudWatch > Log groups
 ```
 
-<img src="/images/cw-log.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/cw-log.png" alt="AWS Cognito - User Pool" width="1300">
 
 Check the log groups for Lambda functions. These logs are useful for debugging API errors, authentication problems, payment issues, and data validation errors.
 
@@ -320,9 +320,9 @@ Open:
 CloudFormation > Stacks > wallet-app-backend-dev > Events
 ```
 
-<img src="/images/c-info.png" alt="AWS Cognito - User Pool" width="1300">
+<img src="/FCAJ-Workshop/images/c-info.png" alt="AWS Cognito - User Pool" width="1300">
 
-<img src="/images/event.png" alt="AWS Cognito - User Pool" width="900">
+<img src="/FCAJ-Workshop/images/event.png" alt="AWS Cognito - User Pool" width="900">
 
 Read the failed event and fix the related resource or permission.
 

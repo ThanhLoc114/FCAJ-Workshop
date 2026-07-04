@@ -38,7 +38,7 @@ Mở AWS Management Console và vào:
 CloudWatch > Logs > Log groups
 ```
 
-![CloudWatch Logs của AWS BILLO](/images/5-Workshop/cloudwatch-logs.png)
+![CloudWatch Logs của AWS BILLO](/FCAJ-Workshop/images/5-Workshop/cloudwatch-logs.png)
 Tìm các log group liên quan đến Lambda functions của AWS BILLO.
 
 Lambda log group thường có định dạng:
@@ -102,7 +102,7 @@ Mở:
 DynamoDB > Tables > wallet-app-main-dev
 ```
 
-<img src="/images/maindev.png" alt="AWS dynamoDB-Tables - Maindev" width="1300">
+<img src="/FCAJ-Workshop/images/maindev.png" alt="AWS dynamoDB-Tables - Maindev" width="1300">
 
 Kiểm tra các record mong đợi sau khi chạy demo.
 
@@ -157,7 +157,7 @@ Mở:
 Amazon Cognito > User pools > Users
 ```
 
-<img src="/images/c-user.png" alt="Amazon Cognito > User pools > Users" width="1300">
+<img src="/FCAJ-Workshop/images/c-user.png" alt="Amazon Cognito > User pools > Users" width="1300">
 
 Kiểm tra tài khoản người dùng được tạo trong quá trình demo.
 
@@ -205,7 +205,7 @@ CREATE_COMPLETE
 UPDATE_COMPLETE
 ```
 
-<img src="/images/stack.png" alt="CloudFormation > Stacks" width="1300">
+<img src="/FCAJ-Workshop/images/stack.png" alt="CloudFormation > Stacks" width="1300">
 
 Nếu stack bị lỗi trong quá trình deploy, mở tab **Events** để xem tài nguyên nào bị lỗi.
 
@@ -263,7 +263,7 @@ Chọn:
 Delete
 ```
 
-<img src="/images/delete.png" alt="Delete" width="1300">
+<img src="/FCAJ-Workshop/images/delete.png" alt="Delete" width="1300">
 
 Xác nhận thao tác xóa.
 
@@ -318,7 +318,7 @@ CloudWatch Logs có thể tiếp tục lưu log sau khi kiểm thử.
 CloudWatch > Logs > Log groups > Select log group > Retention settings
 ```
 
-<img src="/images/rent.png" alt="rentetion" width="1300">
+<img src="/FCAJ-Workshop/images/rent.png" alt="rentetion" width="1300">
 
 Thời gian lưu log khuyến nghị cho môi trường development:
 
@@ -328,7 +328,7 @@ Thời gian lưu log khuyến nghị cho môi trường development:
 30 days
 ```
 
-<img src="/images/setting.png" alt="rentetion" width="900">
+<img src="/FCAJ-Workshop/images/setting.png" alt="rentetion" width="900">
 
 Không nên để log development được lưu vĩnh viễn nếu không cần thiết.
 

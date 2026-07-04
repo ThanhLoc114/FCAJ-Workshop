@@ -38,7 +38,7 @@ Open the AWS Management Console and go to:
 CloudWatch > Logs > Log groups
 ```
 
-![CloudWatch Logs](/images/5-Workshop/cloudwatch-logs.png)
+![CloudWatch Logs](/FCAJ-Workshop/images/5-Workshop/cloudwatch-logs.png)
 Search for log groups related to the AWS BILLO Lambda functions.
 
 Lambda log groups usually follow this format:
@@ -102,7 +102,7 @@ Open:
 DynamoDB > Tables > wallet-app-main-dev
 ```
 
-<img src="/images/maindev.png" alt="AWS dynamoDB-Tables - Maindev" width="1300">
+<img src="/FCAJ-Workshop/images/maindev.png" alt="AWS dynamoDB-Tables - Maindev" width="1300">
 
 Check whether expected records exist after running the demo.
 
@@ -157,7 +157,7 @@ Open:
 Amazon Cognito > User pools > Users
 ```
 
-<img src="/images/c-user.png" alt="Amazon Cognito > User pools > Users" width="1300">
+<img src="/FCAJ-Workshop/images/c-user.png" alt="Amazon Cognito > User pools > Users" width="1300">
 
 Check the user account created during the demo.
 
@@ -205,7 +205,7 @@ CREATE_COMPLETE
 UPDATE_COMPLETE
 ```
 
-<img src="/images/stack.png" alt="CloudFormation > Stacks" width="1300">
+<img src="/FCAJ-Workshop/images/stack.png" alt="CloudFormation > Stacks" width="1300">
 
 If the stack failed during deployment, open the **Events** tab and review the failed resource.
 
@@ -263,7 +263,7 @@ Choose:
 Delete
 ```
 
-<img src="/images/delete.png" alt="Delete" width="1300">
+<img src="/FCAJ-Workshop/images/delete.png" alt="Delete" width="1300">
 
 Confirm the deletion.
 
@@ -318,7 +318,7 @@ To reduce cost, configure log retention:
 CloudWatch > Logs > Log groups > Select log group > Retention settings
 ```
 
-<img src="/images/rent.png" alt="rentetion" width="1300">
+<img src="/FCAJ-Workshop/images/rent.png" alt="rentetion" width="1300">
 
 Recommended retention for development:
 
@@ -328,7 +328,7 @@ Recommended retention for development:
 30 days
 ```
 
-<img src="/images/setting.png" alt="rentetion" width="900">
+<img src="/FCAJ-Workshop/images/setting.png" alt="rentetion" width="900">
 
 Avoid keeping development logs forever if they are not needed.
 

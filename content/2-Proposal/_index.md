@@ -83,7 +83,7 @@ Amazon DynamoDB stores profiles, wallets, merchants, stores, products, tables, a
 
 The architecture does not require Amazon EC2, custom VPC, NAT Gateway, or RDS because the system is designed around fully managed serverless services.
 
-![AWS BILLO System Architecture](/images/2-Proposal/aws-billo-architecture.png)
+![AWS BILLO System Architecture](/FCAJ-Workshop/images/2-Proposal/aws-billo-architecture.png)
 
 ---
 

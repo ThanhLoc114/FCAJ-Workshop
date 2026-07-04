@@ -79,7 +79,7 @@ The Flutter frontend and Admin Web are currently run locally during development.
 
 The project source code is organized into three main parts:
 
-![AWS BILLO Project Structure](/images/5-Workshop/project-structure.png)
+![AWS BILLO Project Structure](/FCAJ-Workshop/images/5-Workshop/project-structure.png)
 
 ---
 
