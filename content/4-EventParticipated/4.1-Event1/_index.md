@@ -1,126 +1,139 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-05-09
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+#  Automated Prompt Engineering
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+## Event Objectives
 
-### Event Objectives
+- Introduce the importance of Prompt Engineering in improving the output quality of Large Language Models.
+- Explain how to build an effective prompt with the necessary components.
+- Introduce advanced prompting techniques and cost optimization concepts when using AI.
+- Demonstrate **Proptimizer**, a browser extension that automatically optimizes user prompts.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+---
 
-### Speakers
+## Speaker Lineup
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Huỳnh Hoàng Long** - Admin of FCAJ
+- **Nguyễn Tuấn Thịnh** - DevOps/Cloud Engineer, First Cloud AI Journey
+- **Khang Nguyen** - Solution Architect
+- **Nguyễn Phương Thảo** - Application Cloud Dev
 
-### Key Highlights
+---
 
-#### Identifying the drawbacks of legacy application architecture
+## Key Highlights
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+### Automated Prompt Engineering: Enhancing LLM Output Quality
 
-#### Transitioning to modern application architecture – Microservices
+The presentation by **Nguyễn Tuấn Thịnh** focused on how to write prompts effectively in order to maximize the capabilities of AI models. The session also introduced Proptimizer, a product built on AWS.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+### Problems Caused by Poor Prompts
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- Generic prompts lead to generic and low-value outputs.
+- Wasted tokens increase operational cost.
+- Unclear instructions produce inconsistent results.
+- Poor communication with AI reduces productivity.
 
-#### Domain-Driven Design (DDD)
+### Seven Components of an Effective Prompt
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- **Role**: Defines the role that the model should take, such as career coach or senior developer.
+- **Instruction**: Describes the specific task the model needs to perform.
+- **Context**: Provides background information related to the problem.
+- **Input Data**: Includes the data that needs to be processed.
+- **Output Format**: Defines the expected structure or format of the result.
+- **Examples**: Provides sample outputs or few-shot examples for the model to follow.
+- **Constraints/Guidelines**: Sets rules such as word limits, writing style, or things to avoid.
 
-#### Event-Driven Architecture
+### Principles of Writing Good Prompts
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- Be clear and specific.
+- Use directive language.
+- Use delimiters to separate parts of the prompt.
+- Describe what the model should do, not only what it should avoid.
+- Avoid asking LLMs to perform exact arithmetic.
+- Allow the model to say “I don’t know” instead of hallucinating.
+- Break long input into smaller parts.
 
-#### Compute Evolution
+### Advanced Prompting Techniques
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+- **Chain-of-Thought (CoT)**: Encourages the model to reason step by step before answering.
+- **Self-Consistency**: Runs multiple reasoning paths and selects the most consistent answer.
+- **Tree-of-Thoughts (ToT)**: Explores multiple reasoning branches in parallel.
+- **RAG (Retrieval-Augmented Generation)**: Combines external knowledge retrieval with text generation.
+- **Role Prompting**: Assigns a specific role to guide tone, vocabulary, and response style.
 
-#### Amazon Q Developer
+### Token Economics
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Tokens are processing units used by LLMs.
+- Tokens are not always the same as words; they can be subword units.
+- Token usage differs by language, and Vietnamese may require more tokens than English for the same meaning.
+- Concise and precise prompts help reduce AI operation cost.
 
-### Key Takeaways
+### Proptimizer Product
 
-#### Design Mindset
+Proptimizer is a browser extension that automatically optimizes user prompts and allows users to chat with AI directly on any website.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+The architecture uses AWS services such as CloudFront and S3 for frontend hosting, Cognito for authentication, API Gateway and Lambda for backend logic, Amazon Bedrock for AI processing, DynamoDB for data storage, and CloudWatch for monitoring.
 
-#### Technical Architecture
+---
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+## What I Learned
 
-#### Modernization Strategy
+### AI Interaction Mindset
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- Prompting is communication, not just command input.
+- Context strongly affects output quality.
+- Shorter and more focused prompts can reduce cost and improve accuracy.
 
-### Applying to Work
+### Practical Techniques
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- I learned how to apply the seven components of a prompt in real use cases.
+- I understood the differences between CoT, Self-Consistency, and ToT.
+- I realized that LLMs are not ideal for exact mathematical calculations and that such tasks should be handled by dedicated tools.
 
-### Event Experience
+### Real Serverless Architecture
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+- I saw how a real AI product can be built on AWS serverless architecture.
+- I understood the flow: User → CloudFront → API Gateway → Lambda → Bedrock → DynamoDB.
+- I learned that AI applications can be built with low infrastructure cost by using AWS managed services properly.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+---
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+## Professional Application
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+- Apply the seven prompt components to daily tasks such as coding, debugging, and documentation.
+- Use Chain-of-Thought prompting for analysis tasks that require step-by-step reasoning.
+- Estimate token cost before integrating AI into production systems.
+- Refer to the Proptimizer architecture when designing serverless AI applications.
+- Practice writing structured prompts to ensure consistent outputs in teamwork.
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+---
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+## Event Experience
 
-#### Some event photos
-*Add your event photos here*  
+Joining the **First Cloud AI Journey** event on May 9 was a practical and meaningful experience. The session was especially useful for people who use AI every day but have not fully understood how to communicate with AI effectively.
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+### New Perspective on Prompt Engineering
+
+Before the event, I often wrote short prompts and accepted the results without much improvement. After the event, I understood that output quality depends directly on input quality. A prompt with clear role, context, and constraints can produce much better results than a vague question.
+
+### Impression of Proptimizer
+
+The Proptimizer demo impressed me because it turned prompt engineering theory into a real browser extension. The product also showed how AWS serverless services can support a real AI application with low infrastructure cost.
+
+### Key Lessons
+
+- Prompt Engineering is a practical communication skill that can be learned and improved.
+- Token economics helps developers make better technical and financial decisions.
+- Serverless architecture combined with managed AI services such as Amazon Bedrock is a practical direction for building AI products.
+
+---
+
+## Conclusion
+
+Overall, the event not only provided theoretical knowledge but also demonstrated practical implementation through Proptimizer. It helped me change the way I approach AI and gave me a clearer direction for building AI applications on AWS.

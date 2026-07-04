@@ -1,115 +1,371 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-06-29
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+
+# AWS BILLO
+
+## A Serverless Digital Wallet and Store Management System on AWS
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+
+AWS BILLO is a serverless digital wallet and store management system developed during the internship period. The project was designed to demonstrate how AWS cloud services can be used to build a modern application that combines an internal demonstration wallet, merchant POS, table ordering, QR payment, and store management.
+
+The system supports three main roles: Customer, Merchant, and Admin. Customers can register with a phone number, verify OTP, log in, manage a demonstration wallet, transfer money, scan QR codes, order products at a table, make QR payments, and view transaction history. Merchants can register their business, manage store information, products or services, tables, orders, bills, and QR payment sessions. Admins can review merchant applications, approve or reject business registrations, and assign merchant permissions.
+
+The project uses a cost-optimized serverless architecture on AWS. The main AWS services include Amazon Cognito, Amazon API Gateway, AWS Lambda, Amazon DynamoDB, Amazon S3, Amazon CloudWatch, AWS SAM, and AWS CloudFormation. The frontend is developed using Flutter and is designed to support both web and mobile interfaces.
+
+The main purpose of AWS BILLO is not to build a production financial system, but to create a practical MVP that demonstrates cloud-native application design, serverless backend development, role-based access control, QR-based workflows, and AWS service integration.
+
+---
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### What’s the Problem?
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+Many small stores, coffee shops, and food service businesses still manage products, tables, orders, bills, and payments using manual processes or separate tools. This can create several problems:
+
+- Orders may be recorded manually and can be lost or duplicated.
+- Table orders are difficult to track when customers order multiple times.
+- Customers need to wait for staff to view the menu, order products, or request a bill.
+- Store information, product images, and business documents may be stored inconsistently.
+- Payment information is not always clearly connected to the related order or bill.
+- Customers cannot easily review what they paid for after a transaction.
+- Merchants need a simple system to manage stores, products, services, tables, and orders.
+- Admins need a clear workflow to review and approve merchant registration applications.
+- Existing POS and wallet systems may be too complex or costly for small businesses and student learning projects.
+
+#### The Solution
+
+AWS BILLO provides a unified application that combines wallet features, QR payment, store management, and POS functions in one system.
+
+Customers can scan a QR code attached to a table, open the store menu, select products, and submit orders. The system remembers the active table, so customers can reopen the same table session without scanning the QR code again.
+
+Merchants can view the current bill of each table, add or remove items, update the bill, and generate a payment QR code. Customers scan the payment QR code using the BILLO application and confirm the transaction.
+
+After a successful payment, the order is marked as paid, transaction records are created, and the active table is removed from the customer account. To start a new table session, the customer must scan a new table QR code.
+
+Amazon Cognito handles user registration, OTP confirmation, login, and role-based access control. Amazon API Gateway protects backend APIs using JWT authorization. AWS Lambda processes business logic. Amazon DynamoDB stores application data. Amazon S3 stores business documents and product images.
+
+#### Benefits and Return on Investment
+
+AWS BILLO provides the following benefits:
+
+- Reduces manual store and table management.
+- Connects products, orders, bills, payments, and transaction history in one system.
+- Allows customers to order from a table using QR code.
+- Reduces repeated QR scanning during the same table session.
+- Supports QR payment and cash payment workflows.
+- Provides transaction and bill history for users.
+- Uses serverless services without managing EC2 servers.
+- Automatically scales based on actual usage.
+- Uses pay-per-request services to reduce development and demonstration costs.
+- Provides a practical environment for learning AWS serverless architecture.
+
+For the internship project scope, AWS BILLO was developed as an MVP and demonstration system. The main value of the project is the practical experience gained from designing, implementing, testing, and documenting a serverless application on AWS.
+
+---
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+AWS BILLO uses a serverless architecture deployed in the AWS Singapore Region: `ap-southeast-1`.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+Flutter clients communicate with Amazon Cognito for authentication and Amazon API Gateway for protected business operations. API Gateway uses a Cognito JWT Authorizer to verify user identity before forwarding requests to AWS Lambda functions.
+
+Lambda functions handle user profiles, merchant registration, admin approval, store management, product management, table management, orders, bills, payment sessions, wallet transfers, transaction history, and file upload workflows.
+
+Amazon DynamoDB stores profiles, wallets, merchants, stores, products, tables, active table sessions, orders, payment sessions, and transactions. Amazon S3 stores business licenses, store images, and product images using pre-signed URLs. Amazon CloudWatch collects Lambda logs and supports troubleshooting.
+
+The architecture does not require Amazon EC2, custom VPC, NAT Gateway, or RDS because the system is designed around fully managed serverless services.
+
+![AWS BILLO System Architecture](/images/2-Proposal/aws-billo-architecture.png)
+
+---
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+
+- **Amazon Cognito**: Manages phone number registration, OTP confirmation, login, JWT tokens, and user groups for Customer, Merchant, and Admin.
+
+- **Amazon API Gateway**: Provides HTTP APIs and validates Cognito JWT tokens before routing requests to backend services.
+
+- **AWS Lambda**: Executes business logic for authentication profiles, wallets, merchant applications, store management, products, tables, orders, bills, and payments.
+
+- **Amazon DynamoDB**: Stores profiles, wallets, merchants, stores, products, tables, orders, payment sessions, and transaction records.
+
+- **DynamoDB Idempotency Table**: Prevents duplicate wallet transfers and duplicate QR payment requests.
+
+- **Amazon S3**: Stores business licenses, store images, and product images.
+
+- **Amazon CloudWatch**: Stores Lambda logs, monitors backend behavior, and supports debugging.
+
+- **AWS SAM / AWS CloudFormation**: Defines, builds, deploys, and manages AWS resources as Infrastructure as Code.
+
+- **AWS Amplify Hosting or Amazon S3 + Amazon CloudFront**: Can be used to host the Flutter Web application.
+
+---
 
 ### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+
+- **Flutter Application**: Provides interfaces for Customer, Merchant, and Admin on web and mobile platforms.
+
+- **Authentication Module**: Handles registration, OTP confirmation, login, logout, and role-based navigation.
+
+- **Customer Module**: Manages wallet balance, money transfer, QR scanning, table ordering, bill payment, profile, and transaction history.
+
+- **Merchant Module**: Manages business registration, store information, products, services, tables, orders, bills, QR payments, and refunds.
+
+- **Admin Module**: Allows Admin to review, approve, or reject merchant registration applications.
+
+- **API Layer**: API Gateway validates JWT tokens and routes requests to Lambda functions.
+
+- **Business Logic Layer**: Lambda functions validate requests, check permissions, calculate order totals, and execute wallet transactions.
+
+- **Data Layer**: DynamoDB stores application data using partition keys and sort keys for serverless access patterns.
+
+- **File Storage Layer**: S3 stores images and documents uploaded through pre-signed URLs.
+
+- **Monitoring Layer**: CloudWatch records Lambda execution logs and application errors.
+
+---
+
+### Main System Flows
+
+#### Authentication Flow
+
+1. The user enters a phone number and password.
+2. Amazon Cognito creates the account.
+3. Cognito sends an OTP to the registered phone number.
+4. The user confirms the OTP.
+5. A Post Confirmation Lambda creates the user profile and wallet.
+6. Cognito returns JWT tokens after login.
+7. The application reads the user group and opens the appropriate interface.
+
+#### Merchant Registration Flow
+
+1. A customer completes the business registration form.
+2. The business license image is uploaded to Amazon S3 using a pre-signed URL.
+3. The application is stored in DynamoDB with `PENDING` status.
+4. An Admin reviews the application.
+5. If approved, the user is added to the Cognito Merchant group.
+6. The system creates the merchant’s store.
+7. The merchant can access the store management interface.
+
+#### Table Ordering Flow
+
+1. The merchant creates a table.
+2. The system generates a QR code for the table.
+3. The merchant prints and attaches the QR code to the table.
+4. A customer scans the table QR code.
+5. The application saves the table as the customer’s active table.
+6. The customer views the menu and submits an order.
+7. Additional products are merged into the current table bill.
+8. The customer can reopen the active table without scanning again.
+
+#### QR Payment Flow
+
+1. The merchant opens the table bill.
+2. The merchant reviews and edits the products if necessary.
+3. The merchant selects **Generate Payment QR**.
+4. The system saves the current bill.
+5. A payment session and QR code are created.
+6. The customer scans the payment QR code.
+7. The application displays the store, products, and total amount.
+8. The customer confirms the payment.
+9. DynamoDB Transaction deducts the customer wallet and credits the merchant wallet.
+10. The order and payment session are marked as paid.
+11. Transaction records are created for both users.
+12. The active table is removed from the customer account.
+
+---
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Implementation Phases
+
+- **Phase 1 – Research and Requirements Analysis**
+  Study the project requirements, identify the main users, analyze business workflows, and research suitable AWS services.
+
+- **Phase 2 – Architecture and Data Design**
+  Design the serverless architecture, DynamoDB access patterns, APIs, user roles, wireframes, and security model.
+
+- **Phase 3 – AWS Infrastructure Development**
+  Create Cognito, API Gateway, Lambda, DynamoDB, S3, and CloudWatch resources using AWS SAM.
+
+- **Phase 4 – Core Feature Development**
+  Implement authentication, wallets, business registration, store management, product management, orders, QR payments, and transaction history.
+
+- **Phase 5 – Table Management and Billing**
+  Implement table QR codes, active table sessions, menu ordering, bill editing, and payment QR generation.
+
+- **Phase 6 – UI/UX Improvement**
+  Develop a shared Flutter theme and improve the Customer, Merchant, Admin, and Authentication interfaces.
+
+- **Phase 7 – Testing and Deployment**
+  Run frontend and backend tests, validate SAM templates, build the application, deploy the AWS stack, and verify major workflows.
+
+#### Technical Requirements
+
+- Flutter SDK for web and mobile application development.
+- Node.js 22.x for AWS Lambda functions.
+- AWS SAM CLI for build and deployment.
+- Amazon Cognito User Pool with Customer, Merchant, and Admin groups.
+- API Gateway HTTP API with JWT Authorizer.
+- DynamoDB tables using on-demand capacity.
+- DynamoDB transactions for wallet transfers and QR payments.
+- S3 pre-signed URLs for direct file upload.
+- QR code generation and camera scanning in Flutter.
+- Idempotency keys for transfer and payment requests.
+- CloudWatch Logs for backend monitoring.
+- HTTPS for camera access outside localhost.
+
+---
 
 ### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+
+#### Project Timeline
+
+- **Week 7**: Research project requirements, AWS services, user roles, and business flows.
+
+- **Week 8**: Design system architecture, wireframes, DynamoDB data model, and API direction.
+
+- **Week 9**: Create the Flutter project, AWS SAM infrastructure, Cognito, API Gateway, DynamoDB, and S3.
+
+- **Week 10**: Implement authentication, wallet transfer, merchant registration, admin approval, store management, and product management.
+
+- **Week 11**: Implement table management, table QR ordering, bill editing, QR payment, transaction history, and UI/UX improvements.
+
+- **Week 12**: Complete system integration, testing, AWS deployment, documentation, final report, and demonstration preparation.
+
+---
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+The project uses pay-per-request serverless services. Actual costs depend on the number of users, API requests, OTP messages, stored images, data transfer, and CloudWatch Logs.
 
-Total: $0.7/month, $8.40/12 months
+A demonstration scenario may include:
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+- Fewer than 100 monthly active users.
+- Approximately 10,000 API requests per month.
+- Fewer than 100,000 Lambda executions per month.
+- Less than 1 GB of DynamoDB data.
+- Less than 2 GB of S3 images and documents.
+- Limited Flutter Web traffic.
+- A small number of verified SMS OTP destinations.
+
+#### Estimated Infrastructure Costs
+
+- **AWS Lambda**: Expected to remain within the free or very low-cost usage range for demonstration traffic.
+
+- **Amazon API Gateway HTTP API**: Approximately $0.01–$0.05 per month for a small number of requests.
+
+- **Amazon DynamoDB**: Approximately $0.10–$1.00 per month with low on-demand read/write usage.
+
+- **Amazon S3**: Approximately $0.05–$0.50 per month for a small image and document collection.
+
+- **Amazon Cognito**: Expected to have low or no user-pool cost for a small number of monthly active users. SMS delivery is charged separately.
+
+- **Amazon CloudWatch**: Approximately $0.00–$1.00 per month when log volume and retention are controlled.
+
+- **Frontend Hosting**: Approximately $1.00–$5.00 per month depending on hosting, build frequency, storage, and traffic.
+
+- **SMS OTP**: Variable cost based on the destination country, message count, and AWS messaging configuration.
+
+#### Estimated Total
+
+- Backend demonstration environment: approximately **$1–$5 per month**, excluding SMS OTP.
+- Backend with Flutter Web hosting: approximately **$2–$10 per month**, excluding SMS OTP.
+- Development may remain near zero when AWS credits or eligible free-tier allowances are available.
+
+These values are preliminary estimates and should be verified using the AWS Pricing Calculator before production deployment.
+
+[AWS Pricing Calculator](https://calculator.aws/)
+
+---
 
 ### 7. Risk Assessment
+
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+
+- **SMS Sandbox Restrictions**: High impact, high probability during development.
+- **Duplicate Payment Requests**: High impact, medium probability.
+- **Insufficient Wallet Balance**: Medium impact, medium probability.
+- **QR Session Expiration**: Medium impact, medium probability.
+- **Unauthorized API Access**: High impact, low probability.
+- **Personal Document Exposure**: High impact, low probability.
+- **Cloud Cost Growth**: Medium impact, low probability during demonstration.
+- **Camera Permission Problems**: Medium impact, medium probability on web browsers.
 
 #### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+
+- Verify testing phone numbers while Cognito SMS remains in sandbox.
+- Request production SMS access before public deployment.
+- Use Cognito JWT Authorizer and role checks in protected APIs.
+- Use DynamoDB transactions for wallet transfers and QR payments.
+- Use idempotency keys to prevent duplicate transactions.
+- Recalculate product prices in the backend instead of trusting the frontend.
+- Set payment session expiration times.
+- Invalidate previous payment QR codes whenever a bill changes.
+- Use S3 pre-signed URLs with limited expiration.
+- Configure CloudWatch log retention and AWS Budget alerts.
+- Require HTTPS and provide image upload or manual code alternatives for QR scanning.
 
 #### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+
+- Use verified sandbox phone numbers for demonstration.
+- Use manual payment session entry if camera scanning is unavailable.
+- Preserve transaction and order records for troubleshooting.
+- Use CloudFormation rollback if AWS deployment fails.
+- Restore DynamoDB data using Point-in-Time Recovery when required.
+- Disable affected APIs or payment functions if transaction inconsistencies are detected.
+
+---
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+
+#### Technical Improvements
+
+- Replace manual store and table management with a centralized application.
+- Provide secure authentication and role-based access control.
+- Support serverless wallet transfers and QR payments.
+- Connect table orders, bills, payments, and transaction history.
+- Allow customers to reopen an active table without rescanning QR.
+- Prevent duplicate payment processing.
+- Support direct image and document uploads to Amazon S3.
+- Provide a scalable backend without managing EC2 servers.
+
+#### Project Deliverables
+
+- Flutter web and mobile application.
+- AWS SAM serverless backend.
+- Cognito authentication and role management.
+- Customer, Merchant, and Admin interfaces.
+- Store, product, table, order, bill, wallet, and payment functions.
+- DynamoDB data model.
+- S3 image and document storage.
+- Architecture diagram and API documentation.
+- Frontend and backend testing.
+- AWS development deployment.
+- Final report and demonstration scenario.
+
+#### Long-Term Value
+
+AWS BILLO can serve as a foundation for a larger digital wallet and small-business management platform.
+
+Future improvements may include:
+
+- Production SMS access.
+- Secure token storage and automatic token refresh.
+- Forgot-password support.
+- Push notifications.
+- Merchant revenue reports.
+- PDF bill export.
+- Inventory management.
+- CI/CD pipelines.
+- Production frontend hosting.
+- Fraud detection and transaction limits.
+- Audit logs and financial reconciliation.

@@ -1,59 +1,58 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2026-06-01
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Bắt đầu nghiên cứu đề tài dự án thực tập và xác định các yêu cầu chính của hệ thống.
+- Tìm hiểu các dịch vụ AWS phù hợp với định hướng triển khai dự án.
+- Phân tích các luồng hoạt động chính và luồng nghiệp vụ của hệ thống.
+- Thảo luận về tính khả thi, phạm vi kỹ thuật và hướng triển khai dự án.
+- Phân công nhiệm vụ nghiên cứu cho các thành viên trong nhóm để chuẩn bị cho các giai đoạn tiếp theo.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                                                                                                | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | --------------- | --------------------------------------- |
+| 2   | - Xem lại yêu cầu của đề tài thực tập <br> - Thảo luận ý tưởng ban đầu và kết quả mong muốn của hệ thống <br> - Xác định các nhóm người dùng chính và các chức năng cốt lõi của hệ thống                                                                                 | 01/06/2026   | 01/06/2026      |                                         |
+| 3   | - Nghiên cứu các dịch vụ AWS có thể phù hợp với dự án <br>  + Amazon S3 <br>  + Amazon DynamoDB <br>  + AWS Lambda <br>  + Amazon API Gateway <br>  + Amazon Cognito <br> - Ghi chú vai trò của từng dịch vụ trong hệ thống                                              | 02/06/2026   | 02/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 4   | - Phân tích các luồng hoạt động chính của hệ thống <br>  + Luồng đăng ký và đăng nhập người dùng <br>  + Luồng đăng ký cửa hàng/chủ kinh doanh <br>  + Luồng quản lý sản phẩm hoặc dịch vụ <br>  + Luồng tạo đơn hàng và thanh toán <br> - Phác thảo ghi chú về workflow | 03/06/2026   | 03/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 5   | - Đánh giá tính khả thi của dự án <br> - Thảo luận các thách thức kỹ thuật như lưu trữ dữ liệu, xác thực người dùng, thiết kế API và xử lý nghiệp vụ <br> - Xác định các chức năng nên ưu tiên cho phiên bản MVP                                                         | 04/06/2026   | 04/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 6   | - Phân công nhiệm vụ nghiên cứu cho các thành viên trong nhóm <br> - Tổng hợp định hướng kiến trúc AWS dự kiến cho dự án <br> - Chuẩn bị ghi chú cho giai đoạn thiết kế và triển khai tiếp theo                                                                          | 05/06/2026   | 05/06/2026      | https://cloudjourney.awsstudygroup.com/ |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Xác định được định hướng ban đầu của đề tài thực tập và làm rõ mục tiêu chính của hệ thống.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Xác định được các nhóm người dùng chính và các yêu cầu chức năng cơ bản.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Đã nghiên cứu một số dịch vụ AWS có thể sử dụng trong dự án, bao gồm:
+  - Amazon S3
+  - Amazon DynamoDB
+  - AWS Lambda
+  - Amazon API Gateway
+  - Amazon Cognito
+  - Amazon CloudWatch
+  - ...
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Hiểu vai trò cơ bản của từng dịch vụ AWS trong kiến trúc ứng dụng serverless.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Phân tích được các luồng hoạt động chính của hệ thống:
+  - Đăng ký và xác thực người dùng
+  - Đăng ký cửa hàng/chủ kinh doanh
+  - Quản lý sản phẩm hoặc dịch vụ
+  - Tạo đơn hàng
+  - Xử lý thanh toán
+  - Lưu lịch sử giao dịch và hóa đơn
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Thảo luận và đánh giá tính khả thi của dự án dựa trên phạm vi kỹ thuật, thời gian thực hiện và năng lực của nhóm.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Xác định được các chức năng cần ưu tiên trong phiên bản MVP.
 
+- Phân công nhiệm vụ nghiên cứu cho các thành viên trong nhóm để chuẩn bị cho giai đoạn thiết kế kiến trúc và triển khai ở các tuần tiếp theo.
 
+- Hoàn thành ghi chú nghiên cứu dự án và chuẩn bị nền tảng cho giai đoạn phát triển tiếp theo.

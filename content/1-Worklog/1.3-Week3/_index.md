@@ -1,57 +1,63 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Review basic AWS account management, IAM, AWS Budgets, and VPC concepts from previous weeks.
+- Continue learning networking fundamentals on AWS.
+- Understand basic learning frameworks and study methods for cloud computing.
+- Attend a Seminar/Knowledge-sharing session at the company.
+- Take notes on practical cloud learning approaches and apply them to the internship learning plan.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                                                                                                                                                                                                       | Start Date | Completion Date | Reference Material                      |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------- |
+| 2   | - Review IAM, AWS Budgets, AWS Support, and basic VPC concepts from Week 2 <br> - Take notes on unclear points and prepare questions for further learning                                                                                                                  | 04/05/2026 | 04/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 3   | - Continue learning networking fundamentals on AWS <br> - Review basic VPC components: <br>  + VPC <br>  + Subnet <br>  + Route Table <br>  + Internet Gateway <br>  + Security Group                                                                                      | 05/05/2026 | 05/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 4   | - Learn about basic cloud learning methods and technical documentation reading skills <br> - Practice reading AWS documentation and identifying important sections such as prerequisites, architecture, and cleanup steps                                                  | 06/05/2026 | 06/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 5   | - Learn about common cloud architecture learning frameworks <br> - Understand how to approach AWS labs step by step: <br>  + Read objectives <br>  + Prepare resources <br>  + Perform hands-on tasks <br>  + Troubleshoot errors <br>  + Clean up resources               | 07/05/2026 | 07/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 6   | - Prepare notes and questions for the company event <br> - Review previous AWS labs and summarize key learning points <br> - Organize weekly worklog content                                                                                                               | 08/05/2026 | 08/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 7   | - Attend a Seminar/Knowledge-sharing session at the company <br> - Listen to sharing from speakers and company members <br> - Learn practical approaches to studying cloud computing and cloud architecture <br> - Take notes and summarize lessons learned from the event | 09/05/2026 | 09/05/2026      | Company event                           |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Reviewed the main knowledge from Week 2, including IAM, AWS Budgets, AWS Support, and basic VPC concepts.
 
-* Successfully created and configured an AWS Free Tier account.
+- Strengthened understanding of basic AWS networking components:
+  - VPC
+  - Subnet
+  - Route Table
+  - Internet Gateway
+  - Security Group
+  - Network ACL
+  - ...
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Learned how to read AWS documentation more effectively by focusing on:
+  - Lab objectives
+  - Prerequisites
+  - Step-by-step implementation
+  - Architecture diagrams
+  - Troubleshooting notes
+  - Resource cleanup instructions
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Understood the importance of following a structured learning framework when studying cloud computing.
 
-* Used AWS CLI to perform basic operations such as:
+- Learned how to approach AWS hands-on labs in a systematic way:
+  - Understand the objective
+  - Prepare required resources
+  - Follow implementation steps
+  - Identify and troubleshoot errors
+  - Record results
+  - Clean up unused resources
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Attended a Seminar/Knowledge-sharing session at the company on 09/05/2026.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Gained practical insights from speakers and company members about cloud learning methods, technical mindset, and AWS study orientation.
+
+- Took notes from the event and applied the key takeaways to improve the learning plan for the following weeks.

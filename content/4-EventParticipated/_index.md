@@ -1,44 +1,56 @@
 ---
 title: "Events Participated"
-date: 2024-01-01
+date: 2026-06-06
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+During the internship and learning process with **First Cloud AI Journey**, I participated in events related to cloud computing, generative AI, prompt engineering, and serverless application development on AWS.
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
-
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
-
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
-
-&emsp;**Date & Time:** 09:00, August 13, 2025  
-
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
-
-&emsp;**Role:** Attendee  
+These events helped me strengthen both technical knowledge and practical thinking. Through the sessions, I learned how AI can be applied in real-world systems, how prompt engineering improves the quality of LLM outputs, and how AWS serverless services can support the development of cost-optimized AI applications.
 
 ---
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+## Event List
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+### [4.1 - Event 1: Automated Prompt Engineering](4.1-Event1/)
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+This event introduced the importance of prompt engineering, the structure of effective prompts, advanced prompting techniques, token economics, and the Proptimizer application built on AWS serverless architecture.
 
-&emsp;**Role:** Attendee  
+Date & Time: 09:00, May 09, 2026
+
+Location: 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+Role: Attendee
+
+### [4.2 - Event 2: Automated Prompt Engineering](4.2-Event2/)
+
+This event provided a deeper technical view of automated prompt engineering, advanced prompting methods, token cost optimization, and a production-ready AWS serverless architecture for AI applications.
+
+Date & Time: 09:00, June 06, 2026
+
+Location: 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+
+Role: Attendee
+
+---
+
+## Key Learning Outcomes
+
+After participating in these events, I gained a clearer understanding of:
+
+- The role of prompt engineering in improving LLM output quality.
+- The seven core components of an effective prompt.
+- Advanced prompting methods such as Chain-of-Thought, Self-Consistency, Tree-of-Thoughts, RAG, and Role Prompting.
+- Token economics and the importance of writing concise prompts.
+- AWS serverless architecture using CloudFront, S3, Cognito, API Gateway, Lambda, Bedrock, DynamoDB, and CloudWatch.
+- How real AI products can be built with cost-optimized cloud architecture.
+
+---
+
+## Personal Reflection
+
+These events helped me change the way I work with AI. Instead of using short and unclear prompts, I learned to provide role, context, instructions, constraints, and expected output format.
+
+The sessions also helped me connect AI theory with real cloud implementation. The Proptimizer demo showed that a practical AI product can be built using serverless services on AWS while still keeping infrastructure cost low.

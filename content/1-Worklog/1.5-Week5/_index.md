@@ -1,57 +1,55 @@
 ---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Review Amazon EC2, EBS, Security Group, and basic networking concepts.
+- Practice building and connecting to an EC2 server.
+- Understand the basic process of establishing a VPN connection.
+- Work directly at the company office and participate in group discussion.
+- Improve troubleshooting skills when working with EC2 and network configuration.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                                                                                                                                                                                          | Start Date | Completion Date | Reference Material                      |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------- |
+| 2   | - Review Amazon EC2 concepts from Week 4 <br> - Review key components: <br>  + EC2 instance <br>  + AMI <br>  + Key pair <br>  + Security Group <br>  + EBS volume                                                                                            | 18/05/2026 | 18/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 3   | - Learn how to launch an EC2 instance <br> - Learn how to configure inbound rules in Security Group <br> - Prepare notes for hands-on EC2 practice                                                                                                            | 19/05/2026 | 19/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 4   | - Work directly at the company office from 08:30 to 16:30 <br> - Work in group to practice building an EC2 server <br> - Configure key pair and Security Group <br> - Connect to EC2 instance using SSH <br> - Discuss issues and solutions with team members | 20/05/2026 | 20/05/2026      | Company office                          |
+| 5   | - Continue practicing EC2 configuration <br> - Learn basic troubleshooting steps when EC2 cannot be connected via SSH <br> - Review common issues related to key pair, Security Group, public IP, and network settings                                        | 21/05/2026 | 21/05/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 6   | - Learn and practice basic VPN connection concepts <br> - Review the relationship between VPC, subnet, route table, and VPN connection <br> - Summarize the EC2 and VPN practice results                                                                      | 22/05/2026 | 22/05/2026      | https://cloudjourney.awsstudygroup.com/ |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Reviewed and strengthened knowledge of Amazon EC2 and its main components:
+  - EC2 instance
+  - AMI
+  - Instance type
+  - Key pair
+  - Security Group
+  - EBS volume
+  - ...
 
-* Successfully created and configured an AWS Free Tier account.
+- Practiced launching and configuring an EC2 instance.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Understood how Security Group inbound rules affect the ability to connect to an EC2 instance.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Worked directly at the company office on 20/05/2026 from 08:30 to 16:30.
 
-* Used AWS CLI to perform basic operations such as:
+- Participated in group discussion and hands-on practice related to EC2 server creation and VPN connection.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+- Learned common troubleshooting steps for EC2 connection issues, including:
+  - Checking key pair
+  - Checking public IP address
+  - Checking Security Group inbound rules
+  - Checking network and route configuration
+  - Checking instance status
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood the basic purpose of VPN in securely connecting private networks.
+
+- Gained more practical experience in working with AWS resources and resolving configuration issues during hands-on labs.

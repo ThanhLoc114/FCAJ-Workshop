@@ -1,59 +1,81 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Hoàn thiện luồng xác thực người dùng cốt lõi cho AWS BILLO.
+- Xây dựng các chức năng ví cơ bản cho Customer, bao gồm xem số dư, chuyển tiền, nhận tiền bằng QR và lịch sử giao dịch.
+- Xây dựng luồng đăng ký kinh doanh và phê duyệt Merchant.
+- Triển khai chức năng quản lý cửa hàng và dịch vụ cho Merchant.
+- Xây dựng luồng POS và tạo order ban đầu.
+- Tích hợp frontend, backend và các dịch vụ AWS cho các chức năng nghiệp vụ chính.
+- Làm việc trực tiếp tại văn phòng công ty vào ngày 22/06/2026 từ 08:30 đến 16:30.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | --------------------------------------- |
+| 2   | - Làm việc trực tiếp tại văn phòng công ty từ 08:30 đến 16:30 <br> - Rà soát hạ tầng AWS đã triển khai ở tuần 9 <br> - Hoàn thiện luồng đăng ký, xác thực OTP, đăng nhập và đăng xuất <br> - Chuẩn hóa định dạng số điện thoại Việt Nam <br> - Kiểm thử xác thực với Amazon Cognito và API Gateway JWT Authorizer                     | 22/06/2026   | 22/06/2026      | Company office                          |
+| 3   | - Xây dựng chức năng tự động tạo profile và ví sau khi xác nhận tài khoản <br> - Tạo dữ liệu ví mặc định trên DynamoDB <br> - Xây dựng API hiển thị số dư ví <br> - Kết nối Flutter frontend với API ví <br> - Kiểm tra CloudWatch Logs khi API phát sinh lỗi                                                                         | 23/06/2026   | 23/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 4   | - Xây dựng chức năng chuyển tiền giữa các Customer <br> - Sử dụng DynamoDB Transaction để cập nhật an toàn ví người gửi và người nhận <br> - Thêm idempotency key để chống giao dịch trùng <br> - Xây dựng QR nhận tiền cá nhân <br> - Xây dựng API lịch sử và chi tiết giao dịch                                                     | 24/06/2026   | 24/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 5   | - Xây dựng luồng đăng ký kinh doanh cho Merchant <br> - Upload giấy phép kinh doanh lên Amazon S3 bằng pre-signed URL <br> - Xây dựng giao diện Admin xem hồ sơ đăng ký kinh doanh <br> - Triển khai thao tác duyệt hoặc từ chối hồ sơ <br> - Thêm user được duyệt vào Merchant group                                                 | 25/06/2026   | 25/06/2026      | https://cloudjourney.awsstudygroup.com/ |
+| 6   | - Tự động tạo thông tin cửa hàng sau khi hồ sơ Merchant được phê duyệt <br> - Xây dựng chức năng quản lý thông tin cửa hàng <br> - Xây dựng chức năng quản lý sản phẩm/dịch vụ: thêm, sửa, xóa và ẩn dịch vụ <br> - Upload ảnh dịch vụ lên Amazon S3 <br> - Xây dựng luồng POS và tạo order ban đầu, hỗ trợ thanh toán tiền mặt và QR | 26/06/2026   | 26/06/2026      | https://cloudjourney.awsstudygroup.com/ |
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Hoàn thiện luồng xác thực cốt lõi cho AWS BILLO:
+  - Đăng ký tài khoản
+  - Xác thực OTP
+  - Đăng nhập
+  - Đăng xuất
+  - Phân quyền API bằng JWT
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Chuẩn hóa xử lý số điện thoại Việt Nam trong quá trình đăng ký và đăng nhập.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Xây dựng chức năng tự động tạo profile và ví sau khi người dùng xác nhận tài khoản.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Hiển thị số dư ví của Customer bằng dữ liệu thật từ DynamoDB.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Xây dựng chức năng chuyển tiền cơ bản giữa các ví Customer.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+- Sử dụng DynamoDB Transaction để cập nhật số dư ví an toàn và đảm bảo tính nhất quán dữ liệu.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Thêm idempotency key để hạn chế việc tạo giao dịch trùng khi người dùng gửi lại request.
 
+- Xây dựng QR nhận tiền cá nhân cho tài khoản Customer.
 
+- Xây dựng API lịch sử giao dịch và chi tiết giao dịch.
+
+- Xây dựng luồng đăng ký kinh doanh cho Merchant và upload giấy phép kinh doanh lên Amazon S3.
+
+- Xây dựng luồng phê duyệt hồ sơ Merchant cho Admin:
+  - Xem hồ sơ đang chờ duyệt
+  - Duyệt hồ sơ Merchant
+  - Từ chối hồ sơ Merchant
+  - Thêm user được duyệt vào Merchant group
+
+- Tự động tạo thông tin cửa hàng sau khi hồ sơ Merchant được phê duyệt.
+
+- Xây dựng các chức năng quản lý cửa hàng cơ bản cho Merchant.
+
+- Xây dựng các chức năng quản lý sản phẩm/dịch vụ:
+  - Thêm dịch vụ
+  - Sửa dịch vụ
+  - Xóa dịch vụ
+  - Ẩn dịch vụ
+  - Upload ảnh dịch vụ lên Amazon S3
+
+- Xây dựng luồng POS và tạo order ban đầu.
+
+- Hỗ trợ các phương thức thanh toán cơ bản cho order:
+  - Thanh toán tiền mặt
+  - Thanh toán bằng QR
+
+- Tích hợp các chức năng Customer, Merchant và Admin với các dịch vụ AWS gồm Cognito, Lambda, API Gateway, DynamoDB, S3 và CloudWatch.
+
+- Làm việc trực tiếp tại văn phòng công ty vào ngày 22/06/2026 từ 08:30 đến 16:30 và rà soát các lỗi triển khai trong quá trình phát triển.
