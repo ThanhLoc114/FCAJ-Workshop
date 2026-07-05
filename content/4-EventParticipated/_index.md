@@ -14,7 +14,7 @@ These events helped me strengthen my technical knowledge and develop a more prac
 
 ## List of Events
 
-### [4.1 - Event 1: Automated Prompt Engineering](4.1-Event1/)
+### [4.1 - Event 1: FCAJ Community Day](4.1-Event1/)
 
 This event introduced the importance of Prompt Engineering, the structure of an effective prompt, advanced prompting techniques, token economics, and the Proptimizer application built on AWS serverless architecture.
 
@@ -26,7 +26,7 @@ Location: 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Saigon Ward,
 
 Role: Attendee
 
-### [4.2 - Event 2: Practical AWS Learning with AWS Cloud Quest and Floci](4.2-Event2/)
+### [4.2 - Event 2: FCAJ Community Day](4.2-Event2/)
 
 This event focused on practical methods for learning AWS through hands-on experience. The session emphasized that effective cloud learning should not stop at reading documentation or watching tutorials, but should be combined with practice, project building, service experimentation, and learning from mistakes.
 

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Practical AWS Learning with AWS Cloud Quest and Floci
+# FCAJ Community Day
 
 ## Event Objectives
 

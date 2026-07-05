@@ -14,7 +14,7 @@ Các sự kiện này giúp tôi củng cố kiến thức kỹ thuật và có 
 
 ## Danh sách sự kiện
 
-### [4.1 - Sự kiện 1: Automated Prompt Engineering](4.1-Event1/)
+### [4.1 - Sự kiện 1: FCAJ Community Day](4.1-Event1/)
 
 Sự kiện này giới thiệu tầm quan trọng của Prompt Engineering, cấu trúc của một prompt hiệu quả, các kỹ thuật prompting nâng cao, token economics và ứng dụng Proptimizer được xây dựng trên kiến trúc serverless của AWS.
 
@@ -26,7 +26,7 @@ Thời gian: 09:00 ngày 09/05/2026
 
 Vai trò trong sự kiện: Người tham dự
 
-### [4.2 - Sự kiện 2: Học AWS thực hành với AWS Cloud Quest và Floci](4.2-Event2/)
+### [4.2 - Sự kiện 2: FCAJ Community Day](4.2-Event2/)
 
 Sự kiện này tập trung vào các phương pháp học AWS thông qua trải nghiệm thực tế. Buổi chia sẻ nhấn mạnh rằng việc học cloud hiệu quả không chỉ dừng lại ở đọc tài liệu hoặc xem hướng dẫn, mà cần kết hợp với thực hành, xây dựng dự án, thử nghiệm dịch vụ và học hỏi từ lỗi sai.
 
