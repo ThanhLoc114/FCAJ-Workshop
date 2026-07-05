@@ -1,137 +1,147 @@
 ---
 title: "Sự kiện 2"
-date: 2026-06-06
+date: 2026-05-30
 weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-#  Automated Prompt Engineering
+# Học AWS thực hành với AWS Cloud Quest và Floci
 
 ## Mục đích của sự kiện
 
-- Giới thiệu tầm quan trọng của Prompt Engineering trong việc tối ưu chất lượng đầu ra của các mô hình ngôn ngữ lớn.
-- Cung cấp một khung chuẩn và các thành phần cốt lõi để xây dựng prompt hiệu quả.
-- Chia sẻ các phương pháp prompting nâng cao và chiến lược tối ưu chi phí token khi sử dụng AI.
-- Demo kiến trúc AWS serverless thực tế thông qua ứng dụng **Proptimizer**.
+- Giới thiệu các phương pháp học AWS thông qua trải nghiệm thực tế thay vì chỉ học lý thuyết.
+- Chia sẻ cách **AWS Cloud Quest** hỗ trợ người học xây dựng kỹ năng cloud thông qua lab có hướng dẫn, tình huống thực tế và huy hiệu chính thức từ AWS.
+- Giới thiệu **Floci** như một trình giả lập AWS cục bộ mã nguồn mở, hỗ trợ phát triển và kiểm thử workload AWS trên môi trường local.
+- Giúp sinh viên và người mới học cloud hiểu cách thực hành AWS an toàn hơn, hạn chế rủi ro phát sinh chi phí ngoài ý muốn.
+- Khuyến khích người học tiếp cận AWS bằng cách xây dựng dự án, thử nghiệm dịch vụ và học hỏi từ lỗi sai.
 
 ---
 
 ## Danh sách diễn giả
 
-- **Bao Huynh** - Junior Cloud Native Developer, Endava Vietnam
-- **Le Hoang Gia Dai**
-- **Nguyen Quoc Bao**
-- **Truong Huy Phuoc**
-- **Viet Phat** - AI Majoring at Swinburne University of Technology
-- **Tran Trung Vinh** - System Administrator at Central Retail Group
+Buổi chia sẻ được tổ chức trong khuôn khổ cộng đồng AWS, với sự tham gia của hơn 200 sinh viên và những người quan tâm đến điện toán đám mây. Nội dung chương trình được trình bày bởi nhiều diễn giả, mỗi người phụ trách một khung thời gian khác nhau nhằm chia sẻ kinh nghiệm và góc nhìn thực tế về quá trình học tập, thực hành và phát triển kỹ năng cloud trên AWS.
+
+Danh sách diễn giả trong chương trình gồm:
+
+- **Huỳnh Thái Linh**
+- **The Baller**
+- **Nguyễn Thị Quỳnh Như**
+- **Trần Hữu Nghĩa**
+- **Trần Minh Quân**
+- **Khắc Uy**
+
+Bên cạnh phần trình bày của các diễn giả, buổi chia sẻ cũng nhận được sự hỗ trợ từ mentor và các thành viên trong cộng đồng AWS trong quá trình chuẩn bị, tổ chức và điều phối sự kiện.
 
 ---
 
 ## Nội dung nổi bật
 
-### 1. Tư duy cốt lõi của Prompt Engineering
+### 1. Học AWS thông qua trải nghiệm thực tế
 
-Prompt Engineering không chỉ là việc nhập câu hỏi cho AI. Đây là quá trình cấu trúc cách người dùng giao tiếp với mô hình AI để mô hình hiểu rõ nhiệm vụ, ngữ cảnh, ràng buộc và định dạng đầu ra mong muốn.
+Một trong những nội dung quan trọng của sự kiện là phương pháp học AWS thông qua thực hành. Diễn giả nhấn mạnh rằng việc học cloud sẽ hiệu quả hơn khi người học trực tiếp xây dựng dự án, thử nghiệm dịch vụ, gặp lỗi và tự tìm cách khắc phục.
 
-Nếu không có prompt rõ ràng, người dùng có thể gặp nhiều vấn đề:
+Nếu chỉ xem hướng dẫn hoặc đọc tài liệu, người học có thể nắm được khái niệm cơ bản nhưng khó hiểu sâu cách các dịch vụ AWS hoạt động trong tình huống thực tế. Ngược lại, khi thực hành trực tiếp, người học có thể quan sát cách tài nguyên được tạo, cấu hình, kết nối và vận hành.
 
-- **Prompt chung chung** dẫn đến phản hồi mơ hồ và ít giá trị.
-- **Lãng phí token** làm tăng chi phí vận hành.
-- **Hướng dẫn không rõ ràng** tạo ra kết quả thiếu nhất quán.
-- **Giao tiếp kém với AI** làm giảm năng suất và tốn thời gian chỉnh sửa.
+Phương pháp học này giúp người học:
 
----
-
-### 2. Cấu trúc của một prompt hiệu quả
-
-Để cải thiện chất lượng đầu ra của LLM, một prompt nên có bảy thành phần cơ bản:
-
-- **Role**: Xác định vai trò hoặc góc nhìn chuyên môn mà mô hình cần đảm nhận.
-- **Instruction**: Nêu rõ nhiệm vụ cụ thể mà mô hình cần thực hiện.
-- **Context**: Cung cấp thông tin nền và giới hạn tình huống.
-- **Input Data**: Cung cấp dữ liệu hoặc nội dung cần xử lý.
-- **Output Format**: Xác định cấu trúc kết quả mong muốn, ví dụ JSON, Markdown, bảng hoặc tóm tắt.
-- **Examples**: Cung cấp ví dụ mẫu để mô hình noi theo.
-- **Constraints/Guidelines**: Đặt ra ràng buộc, giọng văn, giới hạn và những điều cần tránh.
+- Hiểu rõ hơn cách các dịch vụ AWS hoạt động.
+- Ghi nhớ kiến thức tốt hơn thông qua trải nghiệm thực tế.
+- Biết cách xử lý lỗi khi triển khai hệ thống.
+- Hình thành tư duy xây dựng và kiểm thử ứng dụng cloud.
+- Tự tin hơn khi áp dụng AWS vào dự án thực tế.
 
 ---
 
-### 3. Các phương pháp prompting nâng cao
+### 2. AWS Cloud Quest
 
-Sự kiện giới thiệu một số kỹ thuật prompting nâng cao:
+Sự kiện giới thiệu **AWS Cloud Quest** như một nền tảng học tập được trò chơi hóa, giúp người học tiếp cận AWS theo cách trực quan và có cấu trúc hơn.
 
-- **Chain-of-Thought (CoT)**: Hướng dẫn mô hình suy luận từng bước trước khi đưa ra câu trả lời cuối cùng.
-- **Self-Consistency**: Chạy nhiều hướng suy luận và chọn kết quả nhất quán nhất.
-- **Tree-of-Thoughts (ToT)**: Cho phép mô hình khám phá nhiều nhánh suy luận và đánh giá các hướng giải quyết khác nhau.
-- **RAG (Retrieval-Augmented Generation)**: Kết hợp truy xuất thông tin bên ngoài với khả năng sinh văn bản của LLM.
-- **Role Prompting**: Gán vai trò cụ thể để kiểm soát giọng văn, từ vựng và phong cách phản hồi.
+AWS Cloud Quest cung cấp các bài lab có hướng dẫn, tình huống gần với thực tế và hệ thống huy hiệu chính thức từ AWS. Thay vì chỉ học qua tài liệu, người học có thể tham gia vào các nhiệm vụ mô phỏng, giải quyết vấn đề và từng bước xây dựng kỹ năng cloud.
 
----
+Một số điểm nổi bật của AWS Cloud Quest gồm:
 
-### 4. Hiểu về Token Economics
+- Cung cấp môi trường học tập tương tác.
+- Có các bài lab được hướng dẫn rõ ràng.
+- Đưa ra các tình huống gần với thực tế triển khai cloud.
+- Giúp người học xây dựng kỹ năng AWS theo lộ trình có cấu trúc.
+- Cung cấp huy hiệu AWS chính thức để ghi nhận quá trình học tập.
 
-Sự kiện cũng giải thích tầm quan trọng của token economics khi sử dụng mô hình AI.
-
-Các ý chính gồm:
-
-- LLM xử lý văn bản bằng token, thường là các phần nhỏ của từ thay vì toàn bộ từ.
-- Mức tiêu thụ token có thể khác nhau giữa các ngôn ngữ.
-- Tiếng Việt có thể tốn nhiều token hơn tiếng Anh cho cùng một ý nghĩa.
-- Viết prompt ngắn gọn và có cấu trúc giúp giảm chi phí.
-- Chi phí token cần được cân nhắc trước khi tích hợp AI vào hệ thống production.
+Thông qua AWS Cloud Quest, người học có thể tiếp cận AWS theo hướng thực tế hơn. Điều này đặc biệt phù hợp với sinh viên và người mới bắt đầu vì nền tảng này giúp giảm cảm giác khó tiếp cận khi học các dịch vụ cloud.
 
 ---
 
-### 5. Triển khai thực tế: Kiến trúc Proptimizer
+### 3. Floci: Trình giả lập AWS cục bộ
 
-Các diễn giả đã giới thiệu **Proptimizer**, một browser extension giúp tự động hóa Prompt Engineering và hỗ trợ tương tác với AI trực tiếp trên bất kỳ trang web nào.
+Bên cạnh AWS Cloud Quest, diễn giả cũng giới thiệu **Floci**, một trình giả lập AWS cục bộ mã nguồn mở.
 
-Ứng dụng được xây dựng trên kiến trúc serverless của AWS, bao gồm:
+Floci cho phép lập trình viên phát triển, thử nghiệm và kiểm thử workload AWS ngay trên máy local mà không cần triển khai trực tiếp lên môi trường AWS thật. Đây là một công cụ hữu ích đối với người mới học cloud vì có thể thử nghiệm ý tưởng trước khi tạo tài nguyên thật trên AWS.
 
-- **CloudFront và Amazon S3** để phân phối frontend.
-- **Amazon Cognito** để xác thực người dùng.
-- **Amazon API Gateway** để định tuyến request backend.
-- **AWS Lambda** để xử lý logic backend serverless.
-- **Amazon Bedrock** để tích hợp mô hình AI.
-- **Amazon DynamoDB** để lưu trữ dữ liệu.
-- **Amazon CloudWatch** để ghi log và giám sát hệ thống.
+Floci mang lại một số lợi ích như:
 
-Kiến trúc này cho thấy một ứng dụng AI có thể được thiết kế với chi phí hạ tầng thấp nhưng vẫn đảm bảo khả năng mở rộng và dễ bảo trì.
+- Hỗ trợ phát triển và kiểm thử trên môi trường local.
+- Giúp thử nghiệm workload AWS mà không cần triển khai ngay lên cloud.
+- Giảm rủi ro phát sinh chi phí ngoài ý muốn.
+- Hỗ trợ người học làm quen với cách hoạt động của một số workload AWS.
+- Tạo môi trường an toàn hơn để thử nghiệm và học hỏi từ lỗi sai.
+
+Đối với sinh viên, vấn đề chi phí là một yếu tố rất quan trọng khi học cloud. Vì vậy, việc sử dụng các công cụ mô phỏng local như Floci có thể giúp quá trình học AWS trở nên an toàn và dễ kiểm soát hơn.
+
+---
+
+### 4. Nhận thức về chi phí khi học cloud
+
+Một điểm đáng chú ý khác trong buổi chia sẻ là vấn đề kiểm soát chi phí khi học AWS. Khi mới bắt đầu, người học có thể vô tình tạo ra tài nguyên không cần thiết hoặc quên xóa tài nguyên sau khi thử nghiệm, dẫn đến phát sinh chi phí ngoài ý muốn.
+
+Thông qua sự kiện, tôi hiểu rằng việc học cloud không chỉ là biết cách tạo dịch vụ, mà còn cần biết cách kiểm soát, theo dõi và dọn dẹp tài nguyên. Các công cụ như AWS Cloud Quest và Floci giúp người học thực hành một cách an toàn hơn trước khi triển khai trên môi trường AWS thật.
+
+Một số lưu ý quan trọng gồm:
+
+- Luôn kiểm tra tài nguyên đã tạo sau khi thực hành.
+- Xóa các tài nguyên không còn sử dụng.
+- Theo dõi chi phí khi học và thử nghiệm trên AWS.
+- Ưu tiên sử dụng lab có hướng dẫn hoặc môi trường giả lập khi mới bắt đầu.
+- Hiểu rõ dịch vụ nào có thể phát sinh chi phí trước khi triển khai.
 
 ---
 
 ## Bài học và cảm nhận cá nhân
 
-### Thay đổi cách tương tác với AI
+### Thay đổi cách học AWS
 
-Sự kiện này giúp tôi thay đổi cách nhìn về Prompt Engineering. Tôi học được rằng chất lượng đầu ra của AI phụ thuộc rất nhiều vào độ rõ ràng của dữ liệu đầu vào. Thay vì viết các prompt ngắn và thiếu ngữ cảnh, tôi nên cung cấp rõ vai trò, bối cảnh, ràng buộc và định dạng kết quả mong muốn.
+Sự kiện này giúp tôi thay đổi cách nhìn về việc học AWS. Trước đây, tôi thường nghĩ rằng việc đọc tài liệu và xem hướng dẫn là đủ để nắm được kiến thức. Tuy nhiên, sau buổi chia sẻ, tôi nhận ra rằng học cloud cần đi kèm với thực hành thường xuyên.
 
-Cách làm này giúp tiết kiệm thời gian vì giảm số lần phải chỉnh sửa hoặc hỏi lại AI do kết quả chưa đúng.
+Việc trực tiếp xây dựng dự án, thử nghiệm dịch vụ và tự xử lý lỗi giúp tôi hiểu rõ hơn bản chất của các dịch vụ AWS. Đây cũng là cách học phù hợp với quá trình thực tập, vì các kiến thức cloud chỉ thật sự có giá trị khi có thể áp dụng vào hệ thống thực tế.
 
-### Góc nhìn thực tế về Cloud và Serverless
+### Góc nhìn thực tế về công cụ học AWS
 
-Điểm nổi bật của sự kiện là việc một kiến trúc cloud lý thuyết được triển khai thành một browser extension AI thực tế.
+Phần giới thiệu AWS Cloud Quest giúp tôi biết thêm một công cụ học AWS có cấu trúc và dễ tiếp cận hơn. Các bài lab có hướng dẫn và tình huống thực tế giúp người học không bị quá tải khi tiếp xúc với nhiều dịch vụ cloud khác nhau.
 
-Proptimizer cho thấy các dịch vụ serverless của AWS có thể hỗ trợ xây dựng một sản phẩm AI thực tế. Sự kết hợp giữa CloudFront, S3, API Gateway, Lambda, Bedrock, DynamoDB, Cognito và CloudWatch là một kiến trúc tham khảo hữu ích cho các ứng dụng AI trong tương lai.
+Bên cạnh đó, Floci mang lại cho tôi một góc nhìn mới về việc thử nghiệm workload AWS trên môi trường local. Điều này rất hữu ích vì không phải lúc nào người học cũng cần triển khai trực tiếp lên cloud thật, đặc biệt trong giai đoạn thử nghiệm hoặc học các khái niệm cơ bản.
+
+### Nhận thức rõ hơn về chi phí
+
+Một bài học quan trọng khác từ sự kiện là cần chú ý đến chi phí khi học và phát triển trên AWS. Việc thử nghiệm cloud nếu không kiểm soát tốt có thể dẫn đến phát sinh chi phí không mong muốn.
+
+Do đó, tôi cần hình thành thói quen kiểm tra tài nguyên, theo dõi chi phí, dọn dẹp môi trường sau khi thực hành và cân nhắc sử dụng công cụ mô phỏng local trước khi triển khai thật.
 
 ---
 
 ## Kế hoạch ứng dụng vào công việc
 
-Sau sự kiện này, tôi có thể áp dụng kiến thức vào các công việc sau:
+Sau sự kiện này, tôi có thể áp dụng kiến thức vào quá trình thực tập và phát triển dự án AWS BILLO theo các hướng sau:
 
-- **Sử dụng prompt template có cấu trúc** cho lập trình, debug và viết tài liệu kỹ thuật.
-- **Áp dụng Chain-of-Thought prompting** cho các bài toán phân tích phức tạp.
-- **Ước lượng token usage và chi phí** trước khi sử dụng AI trong môi trường production.
-- **Áp dụng mô hình serverless architecture** như CloudFront + S3 + API Gateway + Lambda cho các ứng dụng tương lai.
-- **Tham khảo kiến trúc Proptimizer** khi thiết kế ứng dụng AI trên AWS.
-- **Cải thiện teamwork với AI** bằng cách dùng prompt format thống nhất giữa các thành viên.
+- **Sử dụng AWS Cloud Quest** để củng cố kiến thức nền tảng về các dịch vụ AWS.
+- **Học AWS thông qua thực hành** bằng cách xây dựng các chức năng nhỏ và kiểm thử trực tiếp.
+- **Áp dụng tư duy học từ lỗi sai** khi debug Lambda, API Gateway, DynamoDB, S3 và CloudWatch.
+- **Cân nhắc sử dụng công cụ mô phỏng local** như Floci khi cần thử nghiệm workload AWS trước khi triển khai thật.
+- **Kiểm soát chi phí cloud** bằng cách theo dõi tài nguyên, kiểm tra billing và dọn dẹp các dịch vụ không còn sử dụng.
+- **Áp dụng vào dự án AWS BILLO** khi phát triển, kiểm thử và tối ưu các chức năng serverless như xác thực, ví điện tử, quản lý cửa hàng, hóa đơn và thanh toán QR.
 
 ---
 
 ## Kết luận
 
-Sự kiện ngày 06/06 mang lại kiến thức hữu ích ở hai khía cạnh: Prompt Engineering nâng cao và thiết kế ứng dụng serverless hiện đại trên AWS.
+Sự kiện ngày 30/05 mang lại cho tôi nhiều kiến thức thực tế về cách học AWS hiệu quả thông qua trải nghiệm hands-on. Nội dung về AWS Cloud Quest giúp tôi hiểu cách học cloud theo lộ trình có cấu trúc, trong khi Floci giúp tôi nhận ra tầm quan trọng của việc thử nghiệm workload AWS trên môi trường local để hạn chế rủi ro phát sinh chi phí.
 
-Sự kiện giúp tôi hiểu cách giao tiếp với AI hiệu quả hơn và cách thiết kế các hệ thống AI-powered bằng các dịch vụ AWS tối ưu chi phí.
+Buổi chia sẻ giúp tôi có thêm động lực tiếp tục học AWS thông qua dự án thực tế, đồng thời hình thành tư duy cẩn thận hơn về kiểm thử, triển khai và tối ưu chi phí khi làm việc với cloud.
