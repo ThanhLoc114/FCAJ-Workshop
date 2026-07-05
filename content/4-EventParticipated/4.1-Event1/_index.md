@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-#  Automated Prompt Engineering
+# FCAJ Community Day
 
 ## Event Objectives
 
