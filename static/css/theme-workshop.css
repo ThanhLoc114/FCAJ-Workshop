@@ -231,7 +231,7 @@ div.notices.info p {
 img[src*="avatar.png"],
 img[alt*="avatar" i],
 img[class*="avatar" i] {
-  max-width: 350px;
+  max-width: 330px;
   height: auto;
   display: inline-block;
 }
