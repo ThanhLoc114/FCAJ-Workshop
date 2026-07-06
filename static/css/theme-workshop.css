@@ -226,3 +226,12 @@ div.notices.info p {
   border-top: 30px solid #fd9827;
   background: #fff2db;
 }
+
+/* Avatar size override - limit size for profile/avatar images */
+img[src*="avatar.png"],
+img[alt*="avatar" i],
+img[class*="avatar" i] {
+  max-width: 350px;
+  height: auto;
+  display: inline-block;
+}
