@@ -23,7 +23,7 @@ chapter: false
 
   **Class:** 22DTHJA1
 
-  **Internship Company:** Công ty TNHH Amazon Web Services Viet Nam
+  **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
   **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
