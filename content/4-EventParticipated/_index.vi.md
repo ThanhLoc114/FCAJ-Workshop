@@ -1,14 +1,14 @@
 ---
 title: "Sự kiện đã tham gia"
-date: 2026-05-30
+date: 2026-07-25
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Trong quá trình thực tập và học tập cùng **First Cloud AI Journey**, tôi đã tham gia các sự kiện liên quan đến điện toán đám mây, trí tuệ nhân tạo tạo sinh, Prompt Engineering và phương pháp học AWS thông qua thực hành.
+Trong quá trình thực tập và học tập cùng **First Cloud AI Journey**, tôi đã tham gia các sự kiện liên quan đến điện toán đám mây, trí tuệ nhân tạo tạo sinh, Prompt Engineering, phương pháp học AWS thông qua thực hành và phát triển sản phẩm Agentic AI.
 
-Các sự kiện này giúp tôi củng cố kiến thức kỹ thuật và có thêm góc nhìn thực tế về quá trình học tập, phát triển ứng dụng trên nền tảng cloud. Thông qua các buổi chia sẻ, tôi hiểu rõ hơn cách AI có thể được ứng dụng vào hệ thống thực tế, cách Prompt Engineering cải thiện chất lượng đầu ra của mô hình ngôn ngữ lớn, cũng như cách học AWS hiệu quả thông qua lab, dự án thực tế và các công cụ hỗ trợ thử nghiệm an toàn.
+Các sự kiện này giúp tôi củng cố kiến thức kỹ thuật và có thêm góc nhìn thực tế về quá trình học tập, phát triển ứng dụng trên nền tảng cloud. Thông qua các buổi chia sẻ, tôi hiểu rõ hơn cách AI có thể được ứng dụng vào hệ thống thực tế, cách Prompt Engineering cải thiện chất lượng đầu ra của mô hình ngôn ngữ lớn, cách học AWS hiệu quả thông qua lab và dự án thực tế, cũng như cách các sản phẩm Agentic AI được thiết kế, kiểm thử và cải tiến thông qua demo thực tế.
 
 ---
 
@@ -40,6 +40,18 @@ Thời gian: 09:00 ngày 30/05/2026
 
 Vai trò trong sự kiện: Người tham dự
 
+### [4.3 - Sự kiện 3: Agentic AI Build Week](4.3-Event3/)
+
+Sự kiện này giới thiệu cách các nhóm tiếp cận việc xây dựng sản phẩm Agentic AI trong các tình huống thực tế. Các phần trình bày bao gồm nhiều hướng khác nhau như tự động hóa thiết kế kiến trúc giải pháp, đặt món qua hội thoại, xây dựng prototype trong hackathon và phân tích tín hiệu doanh nghiệp dựa trên bằng chứng để hỗ trợ ra quyết định.
+
+Thông qua sự kiện, tôi hiểu rằng Agentic AI không chỉ là việc viết prompt cho mô hình. Một sản phẩm AI thực tế còn cần workflow rõ ràng, khả năng sử dụng công cụ, các bước kiểm chứng kết quả, rào chắn phù hợp và phạm vi triển khai được xác định rõ. Sự kiện cũng cho thấy tầm quan trọng của làm việc nhóm, lặp nhanh và khả năng trình bày rõ ràng khi biến một ý tưởng thành demo sản phẩm AI có thể hoạt động.
+
+Thời gian: 25/07/2026
+
+Địa điểm: Sự kiện cộng đồng First Cloud AI Journey / AWS
+
+Vai trò trong sự kiện: Người tham dự
+
 ---
 
 ## Kiến thức học được
@@ -54,6 +66,8 @@ Sau khi tham gia các sự kiện, tôi hiểu rõ hơn về:
 - Phương pháp học AWS hiệu quả thông qua thực hành, xây dựng dự án, thử nghiệm dịch vụ và học từ lỗi sai.
 - Cách AWS Cloud Quest hỗ trợ người học tiếp cận AWS thông qua lab có hướng dẫn, tình huống thực tế và hệ thống huy hiệu.
 - Vai trò của Floci trong việc mô phỏng môi trường AWS cục bộ, hỗ trợ kiểm thử workload và hạn chế rủi ro phát sinh chi phí cloud.
+- Cách sản phẩm Agentic AI cần có workflow, công cụ, bước kiểm chứng và rào chắn phù hợp.
+- Cách các nhóm xác định phạm vi sản phẩm, xây dựng demo và trình bày giải pháp AI một cách rõ ràng, thực tế.
 
 ---
 
@@ -61,8 +75,8 @@ Sau khi tham gia các sự kiện, tôi hiểu rõ hơn về:
 
 Các sự kiện này giúp tôi thay đổi cách tiếp cận khi học và làm việc với công nghệ cloud và AI. Với sự kiện về Prompt Engineering, tôi hiểu rằng để làm việc hiệu quả với AI, người dùng cần cung cấp yêu cầu rõ ràng, đầy đủ ngữ cảnh và định dạng đầu ra cụ thể thay vì chỉ nhập các câu hỏi ngắn, thiếu thông tin.
 
-Bên cạnh đó, buổi chia sẻ về AWS Cloud Quest và Floci giúp tôi nhận ra rằng học AWS hiệu quả nhất khi kết hợp lý thuyết với thực hành. Việc trực tiếp làm lab, xây dựng dự án nhỏ, thử nghiệm dịch vụ và quan sát lỗi giúp tôi hiểu sâu hơn cách các dịch vụ cloud hoạt động trong tình huống thực tế.
+Buổi chia sẻ về AWS Cloud Quest và Floci giúp tôi nhận ra rằng học AWS hiệu quả nhất khi kết hợp lý thuyết với thực hành. Việc trực tiếp làm lab, xây dựng dự án nhỏ, thử nghiệm dịch vụ và quan sát lỗi giúp tôi hiểu sâu hơn cách các dịch vụ cloud hoạt động trong tình huống thực tế.
 
-Đặc biệt, nội dung về Floci giúp tôi có thêm góc nhìn về việc thử nghiệm workload AWS trên môi trường local trước khi triển khai lên cloud thật. Điều này rất hữu ích đối với sinh viên và người mới học AWS, vì có thể giảm nguy cơ phát sinh chi phí ngoài ý muốn trong quá trình học tập và phát triển dự án.
+Sự kiện Agentic AI Build Week cho tôi góc nhìn rộng hơn về cách AI có thể được phát triển thành sản phẩm thực tế. Tôi đặc biệt ấn tượng với cách các nhóm giải quyết những bài toán khác nhau, từ tạo bản nháp kiến trúc, xây dựng luồng đặt món qua hội thoại, tạo prototype trong hackathon đến phân tích tín hiệu doanh nghiệp để hỗ trợ ra quyết định.
 
-Tổng thể, hai sự kiện đã hỗ trợ trực tiếp cho quá trình thực tập của tôi, đặc biệt là khi phát triển dự án AWS BILLO. Tôi có thêm kiến thức về cách sử dụng AI hiệu quả, cách học AWS có hệ thống và cách chú ý hơn đến yếu tố chi phí khi triển khai ứng dụng trên nền tảng cloud.
+Tổng thể, các sự kiện đã hỗ trợ trực tiếp cho quá trình thực tập của tôi, đặc biệt là khi phát triển dự án AWS BILLO. Tôi có thêm kiến thức về cách sử dụng AI hiệu quả, cách học AWS có hệ thống, cách thiết kế workflow thực tế và cách chú ý hơn đến yếu tố chi phí khi triển khai ứng dụng trên nền tảng cloud.

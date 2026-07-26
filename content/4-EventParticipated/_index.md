@@ -1,14 +1,14 @@
 ---
 title: "Events Participated"
-date: 2026-05-30
+date: 2026-07-25
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-During my internship and learning journey with **First Cloud AI Journey**, I participated in events related to cloud computing, generative artificial intelligence, Prompt Engineering, and practical AWS learning through hands-on experience.
+During my internship and learning journey with **First Cloud AI Journey**, I participated in events related to cloud computing, generative artificial intelligence, Prompt Engineering, practical AWS learning, and Agentic AI product development.
 
-These events helped me strengthen my technical knowledge and develop a more practical mindset toward learning and building applications on the cloud. Through the sharing sessions, I gained a clearer understanding of how AI can be applied to real-world systems, how Prompt Engineering improves the output quality of large language models, and how AWS can be learned effectively through labs, real projects, and safe experimentation tools.
+These events helped me strengthen my technical knowledge and develop a more practical mindset toward learning and building applications on the cloud. Through the sharing sessions, I gained a clearer understanding of how AI can be applied to real-world systems, how Prompt Engineering improves the output quality of large language models, how AWS can be learned effectively through hands-on practice, and how Agentic AI products can be designed, tested, and improved through real project demos.
 
 ---
 
@@ -40,6 +40,18 @@ Location: 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Saigon Ward,
 
 Role: Attendee
 
+### [4.3 - Event 3: Agentic AI Build Week](4.3-Event3/)
+
+This event showcased how different teams approached Agentic AI product building in real scenarios. The presentations covered multiple directions, including solution architecture automation, conversational ordering, hackathon prototyping, and evidence-based business signal intelligence.
+
+Through the event, I learned that Agentic AI is not only about writing prompts for a model. A practical AI product also needs a clear workflow, tool usage, verification steps, guardrails, and a well-defined scope. The event also showed how teamwork, rapid iteration, and clear presentation are important when turning an idea into a working AI product demo.
+
+Date & Time: July 25, 2026
+
+Location: First Cloud AI Journey / AWS community event
+
+Role: Attendee
+
 ---
 
 ## Knowledge Gained
@@ -54,6 +66,8 @@ After participating in these events, I gained a better understanding of:
 - Effective methods for learning AWS through hands-on practice, project building, service experimentation, and learning from mistakes.
 - How AWS Cloud Quest supports AWS learning through guided labs, real-world scenarios, and official badges.
 - The role of Floci in simulating AWS workloads locally, supporting testing, and reducing the risk of unexpected cloud costs.
+- How Agentic AI products require workflows, tools, verification steps, and practical guardrails.
+- How different teams define product scope, build demos, and communicate AI solutions in a clear and practical way.
 
 ---
 
@@ -61,8 +75,8 @@ After participating in these events, I gained a better understanding of:
 
 These events changed the way I approach learning and working with cloud and AI technologies. From the Prompt Engineering event, I learned that effective interaction with AI requires clear requirements, sufficient context, and a specific expected output format instead of short and unclear prompts.
 
-In addition, the session about AWS Cloud Quest and Floci helped me realize that AWS is best learned by combining theory with hands-on practice. By working on labs, building small projects, testing services, and observing errors, I can better understand how cloud services behave in real situations.
+The session about AWS Cloud Quest and Floci helped me realize that AWS is best learned by combining theory with hands-on practice. By working on labs, building small projects, testing services, and observing errors, I can better understand how cloud services behave in real situations.
 
-In particular, the content about Floci gave me a new perspective on testing AWS workloads in a local environment before deploying them to the real cloud. This is useful for students and AWS beginners because it can reduce the risk of unexpected costs during learning and development.
+The Agentic AI Build Week gave me a broader view of how AI can be turned into practical products. I was especially impressed by how different teams solved different problems, from generating architecture drafts and building conversational ordering flows to creating hackathon prototypes and analyzing business signals for decision support.
 
-Overall, both events directly supported my internship process, especially while developing the AWS BILLO project. I gained more knowledge about using AI effectively, learning AWS in a structured way, and paying closer attention to cost management when deploying applications on the cloud.
+Overall, these events directly supported my internship process, especially while developing the AWS BILLO project. I gained more knowledge about using AI effectively, learning AWS in a structured way, designing practical workflows, and paying closer attention to cost management when deploying applications on the cloud.
